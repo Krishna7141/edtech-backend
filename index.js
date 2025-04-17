@@ -21,10 +21,20 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
+        origin: (origin, callback) => {
+            callback(null, origin);
+        },
+        credentials: true,
+    })
+);
+/*
+app.use(
+    cors({
         origin: ["https://edtech-five-theta.vercel.app"],
         credentials: true,
     })
 );
+*/
 app.use(
     fileUpload({
         useTempFiles: true,
