@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin: ["https://kwikskill-by-kkv.vercel.app"],
+        origin: ["https://edtech-five-theta.vercel.app"],
         credentials: true,
     })
 );
